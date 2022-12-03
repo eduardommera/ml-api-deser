@@ -10,21 +10,21 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import pickle
 import json
-from flask import Flask
-
-
-app = Flask(__name__)
 
 
 
-# origins = ["*"]
-# app.add_middleware(CORSMiddleware,
-#                    allow_origins=origins,
-#                   allow_credentials=True,
-#                   allow_methods=["*"],
-#                   allow_headers=["*"],
+app = FastAPI()
+
+
+
+ origins = ["*"]
+ app.add_middleware(CORSMiddleware,
+                    allow_origins=origins,
+                   allow_credentials=True,
+                   allow_methods=["*"],
+                   allow_headers=["*"],
     
-# )
+ )
 
 
 class model_input(BaseModel):
