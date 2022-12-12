@@ -92,6 +92,6 @@ def deser_pred(input_parameters :model_input):
     prediccion = deser_model.predict([input_list])
     
     if prediccion[0] ==0:
-        return 'el alumno no se titula'
+        return 'el alumno no se titula4'
     else:
-        return 'el alumno se titula'
+        return 'el alumno se titula4'
